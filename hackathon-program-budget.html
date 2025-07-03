@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Хакатон Самарканд 2025 | Программа и Смета</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.65;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .page {
+            background: white;
+            border-radius: 24px;
+            padding: 80px 60px;
+            margin-bottom: 40px;
+            box-shadow: 
+                0 4px 32px rgba(0, 0, 0, 0.08),
+                0 2px 16px rgba(0, 0, 0, 0.04),
+                0 1px 4px rgba(0, 0, 0, 0.04);
+            min-height: 1050px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .page:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 40px rgba(0, 0, 0, 0.12),
+                0 4px 20px rgba(0, 0, 0, 0.06),
+                0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logos {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .partner-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .logo-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 91, 219, 0.15);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .logo-container:hover .partner-logo {
+            transform: scale(1.05);
+        }
+        
+        .triangle {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            font-feature-settings: 'kern' 1, 'liga' 1;
+        }
+
+        h1 strong {
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+        
+        h1 strong::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 50%, #7c3aed 100%);
+            border-radius: 2px;
+            opacity: 0.15;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #64748b;
+            margin-bottom: 60px;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            letter-spacing: -0.01em;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 20px;
+            padding: 48px;
+            margin: 48px 0;
+            border: 1px solid rgba(59, 91, 219, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+            border-radius: 0 3px 3px 0;
+        }
+        
+        .highlight-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(59, 91, 219, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 36px;
+            text-align: center;
+            border: 1px solid rgba(59, 91, 219, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(59, 91, 219, 0.15);
+            border-color: rgba(59, 91, 219, 0.2);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: #3b5bdb;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 500;
+        }
+
+        .timeline {
+            margin: 40px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+            box-shadow: 0 4px 12px rgba(59, 91, 219, 0.3);
+            border: 3px solid white;
+            z-index: 10;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 24px;
+            width: 2px;
+            height: calc(100% + 14px);
+            background: #e5e5e5;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-time {
+            font-weight: 600;
+            color: #3b5bdb;
+            margin-bottom: 4px;
+        }
+
+        .timeline-text {
+            color: #666;
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 16px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+        }
+
+        .budget-table th {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            font-weight: 600;
+            color: #3b5bdb;
+            position: relative;
+        }
+        
+        .budget-table th::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+        }
+
+        .budget-table .total-row {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            font-weight: 600;
+            border-top: 2px solid #3b5bdb;
+        }
+
+        .responsibilities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .responsibility-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 36px;
+            border: 1px solid rgba(59, 91, 219, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .responsibility-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+        }
+        
+        .responsibility-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 91, 219, 0.12);
+            border-color: rgba(59, 91, 219, 0.15);
+        }
+
+        .responsibility-card h4 {
+            color: #3b5bdb;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .responsibility-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .responsibility-card li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .responsibility-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #3b5bdb;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .question-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 36px;
+            border: 1px solid rgba(59, 91, 219, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .question-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #3b5bdb 0%, #5c7cfa 100%);
+        }
+        
+        .question-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 91, 219, 0.12);
+            border-color: rgba(59, 91, 219, 0.15);
+        }
+
+        .question-card h4 {
+            color: #3b5bdb;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .question-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            body {
+                background: white !important;
+                margin: 0;
+                padding: 0;
+                font-size: 11pt;
+                line-height: 1.4;
+            }
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 0 !important;
+            }
+            .page {
+                page-break-after: always;
+                page-break-inside: avoid;
+                box-shadow: none;
+                margin: 0;
+                padding: 3cm 2.5cm;
+                border-radius: 0;
+                min-height: calc(297mm - 6cm);
+                height: auto;
+                background: white !important;
+                break-inside: avoid;
+                border: none;
+                backdrop-filter: none;
+                transform: none !important;
+                transition: none !important;
+            }
+            .page:first-child {
+                page-break-before: auto;
+            }
+            .section, .highlight-box, .responsibilities, .stats, .timeline, .questions-grid, .budget-table, .header, .page-header {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            .highlight-box {
+                margin-bottom: 40px !important;
+            }
+            .responsibility-card, .stat-card, .question-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 32px !important;
+                width: 100% !important;
+                box-sizing: border-box;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+                break-after: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            .section {
+                margin-bottom: 40px !important;
+            }
+            .partner-logo {
+                width: 32pt;
+                height: 32pt;
+            }
+            .page-number {
+                position: fixed;
+                bottom: 1cm;
+                right: 2.5cm;
+                font-size: 9pt;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 2cm 2.5cm;
+            }
+            @page :first {
+                margin-top: 3cm;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .page {
+                padding: 60px 40px;
+                margin-bottom: 30px;
+            }
+            
+            .stats,
+            .responsibilities {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            
+            .questions-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+            
+            .page {
+                padding: 40px 24px;
+                margin-bottom: 20px;
+                border-radius: 16px;
+                min-height: auto;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 24px;
+                margin-bottom: 40px;
+                padding-bottom: 24px;
+                text-align: center;
+            }
+            
+            .logos {
+                gap: 24px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .partner-logo {
+                width: 80px;
+                height: 80px;
+            }
+            
+            h1 {
+                font-size: 36px;
+                line-height: 1.25;
+                margin-bottom: 20px;
+            }
+            
+            h2 {
+                font-size: 28px;
+                margin-bottom: 24px;
+            }
+            
+            h3 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            
+            .stats,
+            .responsibilities,
+            .questions-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .stat-card,
+            .responsibility-card,
+            .question-card {
+                padding: 28px;
+            }
+            
+            .highlight-box {
+                padding: 32px;
+                margin: 32px 0;
+            }
+            
+            .budget-table {
+                font-size: 14px;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .budget-table th,
+            .budget-table td {
+                padding: 12px 8px;
+                min-width: 120px;
+            }
+            
+            .timeline-item {
+                padding-left: 30px;
+            }
+            
+            .timeline-item::before {
+                left: 4px;
+                width: 16px;
+                height: 16px;
+            }
+            
+            .timeline-item::after {
+                left: 11px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 16px 12px;
+            }
+            
+            .page {
+                padding: 32px 20px;
+                margin-bottom: 16px;
+                border-radius: 12px;
+            }
+            
+            h1 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .stat-card,
+            .responsibility-card,
+            .question-card {
+                padding: 24px;
+            }
+            
+            .highlight-box {
+                padding: 28px;
+            }
+            
+            .budget-table th,
+            .budget-table td {
+                padding: 10px 6px;
+                font-size: 13px;
+                min-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Страница 1 - Титульная и основная информация -->
+        <div class="page">
+            <div class="header">
+                <div class="logos">
+                    <div class="logo-container">
+                        <img src="Screenshot at Jun 11 15-49-12.png" alt="Angel Connect Logo" class="partner-logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="Screenshot at Jul 02 16-44-49.png" alt="IT Park Logo" class="partner-logo">
+                    </div>
+                    <div class="logo-container">
+                        <img src="1657015867826.jpeg" alt="Министерство цифровых технологий Республики Узбекистан Logo" class="partner-logo">
+                    </div>
+                </div>
+            </div>
+
+            <h1>AI Хакатон <strong>Самарканд</strong></h1>
+            <p class="subtitle">Программа мероприятия и детальная смета проекта</p>
+
+            <div class="highlight-box">
+                <h3 style="margin-bottom: 16px;">Основные параметры проекта</h3>
+                <p style="font-size: 18px; line-height: 1.8;">
+                    <strong>Даты:</strong> 8-10 августа 2025<br>
+                    <strong>Место:</strong> Hilton Samarkand (день 1), площадка в Самарканде (дни 2-3)<br>
+                    <strong>Участники:</strong> до 100 человек (отбор по заявкам)<br>
+                    <strong>Формат:</strong> 3-дневный интенсивный хакатон с международным участием
+                </p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Дня интенсива</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100</div>
+                    <div class="stat-label">Участников</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Менторов от AC</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Разделение ответственности</h2>
+                <div class="responsibilities">
+                    <div class="responsibility-card">
+                        <h4>Angel Connect</h4>
+                        <ul>
+                            <li>Общая координация и организация</li>
+                            <li>Техническая программа</li>
+                            <li>6 экспертов-менторов</li>
+                            <li>Лендинг для заявок</li>
+                            <li>Процесс отбора участников</li>
+                            <li>Критерии оценки проектов</li>
+                            <li>Модерация мероприятия</li>
+                            <li>Финальные презентации</li>
+                            <li>Пост-хакатон поддержка</li>
+                        </ul>
+                    </div>
+                    <div class="responsibility-card">
+                        <h4>IT Park</h4>
+                        <ul>
+                            <li>Площадки и логистика</li>
+                            <li>Кейтеринг и питание</li>
+                            <li>Техническое оснащение</li>
+                            <li>Размещение участников</li>
+                            <li>Организация проезда</li>
+                            <li>Локальные партнеры</li>
+                            <li>Призовой фонд</li>
+                            <li>Медиа-поддержка</li>
+                            <li>Подготовка мерча</li>
+                        </ul>
+                    </div>
+                    <div class="responsibility-card">
+                        <h4>Министерство цифровых технологий Республики Узбекистан</h4>
+                        <ul>
+                            <li>Общее кураторство</li>
+                            <li>Государственная поддержка</li>
+                            <li>Координация с госструктурами</li>
+                            <li>Привлечение Сбер/Яндекс</li>
+                            <li>Регуляторная поддержка</li>
+                            <li>Медиа-освещение</li>
+                            <li>Официальные представители</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number">1</span>
+        </div>
+
+        <!-- Страница 2 - Программа мероприятия -->
+        <div class="page">
+            <h2>Программа мероприятия</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-time">День 1 - 8 августа (Hilton Samarkand)</div>
+                        <div class="timeline-text">
+                            <strong>14:00-18:00 Открытие и погружение</strong><br>
+                            • 14:00-15:00 Регистрация участников<br>
+                            • 15:00-15:20 Открытие, приветствие организаторов<br>
+                            • 15:20-15:40 Выступление спикеров от Министерства цифровых технологий Республики Узбекистан<br>
+                            • 15:40-16:00 Выступление спикеров от IT Park<br>
+                            • 16:00-17:00 Питч идей от участников<br>
+                            • 17:00-18:00 Формирование команд, нетворкинг
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-time">День 2 - 9 августа (Самарканд)</div>
+                        <div class="timeline-text">
+                            <strong>09:00-22:00 Интенсивная разработка</strong><br>
+                            • 09:00-10:00 Завтрак, настройка рабочих мест<br>
+                            • 10:00-11:00 Воркшоп по AI-инструментам<br>
+                            • 11:00-13:00 Работа над проектами<br>
+                            • 13:00-14:00 Обед<br>
+                            • 14:00-17:00 Менторские сессии<br>
+                            • 17:00-19:00 Работа над проектами<br>
+                            • 19:00-20:00 Ужин<br>
+                            • 20:00-22:00 Вечерняя работа
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-time">День 3 - 10 августа (Самарканд)</div>
+                        <div class="timeline-text">
+                            <strong>09:00-18:00 Завершение и презентации</strong><br>
+                            • 09:00-12:00 Финальная разработка<br>
+                            • 12:00-13:00 Обед<br>
+                            • 13:00-14:00 Подготовка презентаций<br>
+                            • 14:00-16:00 Финальные питчи команд<br>
+                            • 16:00-17:00 Оценка жюри<br>
+                            • 17:00-18:00 Награждение и закрытие
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Ключевые вопросы для согласования</h3>
+                <div class="questions-grid">
+                    <div class="question-card">
+                        <h4>Размещение участников</h4>
+                        <p>Возможность размещения команд в общежитии Самарканд 21 School или другой площадке для иногородних участников</p>
+                    </div>
+                    <div class="question-card">
+                        <h4>Транспорт Афрасиаб</h4>
+                        <p>Использование поезда Афрасиаб для доставки части команд из Ташкента в Самарканд</p>
+                    </div>
+                    <div class="question-card">
+                        <h4>Менторы от партнеров</h4>
+                        <p>Количество и профили менторов от Сбер/Яндекс на 9-10 августа</p>
+                    </div>
+                    <div class="question-card">
+                        <h4>Призовой фонд</h4>
+                        <p>Окончательное определение призового фонда и номинаций для награждения</p>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number">2</span>
+        </div>
+
+        <!-- Страница 3 - Детальная смета -->
+        <div class="page">
+            <h2>Смета проекта Angel Connect</h2>
+            
+            <div class="highlight-box">
+                <h3 style="margin-bottom: 16px;">Общая стоимость услуг Angel Connect</h3>
+                <p style="font-size: 24px; font-weight: 600; color: #3b5bdb;">150 000 000 сум</p>
+            </div>
+
+            <div class="section">
+                <h3>В стоимость услуг входит:</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+                    <div>
+                        <h4 style="color: #3b5bdb; margin-bottom: 16px;">До мероприятия</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Координация проекта и управление
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Разработка технической программы
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Создание лендинга для регистрации
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Сбор и обработка заявок
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Экспертный отбор участников
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Подготовка материалов и гайдлайнов
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #3b5bdb; margin-bottom: 16px;">Во время и после мероприятия</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                6 экспертов-менторов на все дни
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Модерация всех активностей
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Воркшопы и мастер-классы
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Техническая поддержка команд
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Организация финальных презентаций
+                            </li>
+                            <li style="position: relative; padding-left: 24px; margin-bottom: 8px; color: #666;">
+                                <span style="position: absolute; left: 0; color: #3b5bdb;">→</span>
+                                Пост-хакатонная поддержка и менторство
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number">3</span>
+        </div>
+
+        <!-- Страница 4 - Дополнительные расходы и следующие шаги -->
+        <div class="page">
+            <h2>Чек-лист процессов на стороне партнеров</h2>
+            
+            <div class="section">
+                <h3>IT Park - Логистика и площадки</h3>
+                <div class="responsibilities">
+                    <div class="responsibility-card">
+                        <h4>Площадки и техническое оснащение</h4>
+                        <ul>
+                            <li>Бронирование Hilton Samarkand (день 1)</li>
+                            <li>Подготовка площадки в Самарканде (дни 2-3)</li>
+                            <li>Техническое оснащение (компьютеры, проекторы)</li>
+                            <li>Интернет и электричество</li>
+                            <li>Рабочие места для 100 участников</li>
+                        </ul>
+                    </div>
+                    <div class="responsibility-card">
+                        <h4>Кейтеринг и размещение</h4>
+                        <ul>
+                            <li>Завтраки, обеды, ужины на 3 дня</li>
+                            <li>Кофе-брейки и перекусы</li>
+                            <li>Размещение иногородних участников</li>
+                            <li>Трансферы между площадками</li>
+                            <li>Организация проезда Афрасиаб</li>
+                        </ul>
+                    </div>
+                    <div class="responsibility-card">
+                        <h4>Призы и мерч</h4>
+                        <ul>
+                            <li>Формирование призового фонда</li>
+                            <li>Заказ наград и дипломов</li>
+                            <li>Подготовка мерча для участников</li>
+                            <li>Организация церемонии награждения</li>
+                            <li>Фото и видео съемка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Министерство цифровых технологий Республики Узбекистан - Кураторство и партнеры</h3>
+                <div class="responsibilities">
+                    <div class="responsibility-card">
+                        <h4>Государственная поддержка</h4>
+                        <ul>
+                            <li>Общее кураторство проекта</li>
+                            <li>Координация с госструктурами</li>
+                            <li>Привлечение Сбер/Яндекс</li>
+                            <li>Регуляторная поддержка</li>
+                            <li>Официальные представители</li>
+                        </ul>
+                    </div>
+                    <div class="responsibility-card">
+                        <h4>Медиа и коммуникации</h4>
+                        <ul>
+                            <li>Медиа-освещение мероприятия</li>
+                            <li>Пресс-релизы и анонсы</li>
+                            <li>Работа со СМИ</li>
+                            <li>Социальные сети</li>
+                            <li>Официальная документация</li>
+                        </ul>
+                    </div>
+                    <div class="responsibility-card">
+                        <h4>Партнерские связи</h4>
+                        <ul>
+                            <li>Привлечение локальных партнеров</li>
+                            <li>Координация с IT-сообществом</li>
+                            <li>Работа с вузами и школами</li>
+                            <li>Международные контакты</li>
+                            <li>Пост-мероприятие поддержка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Следующие шаги</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">До 10 июля 2025</div>
+                            <div class="timeline-text">
+                                <strong>Анонс хакатона</strong><br>
+                                Публикация на всех каналах, открытие регистрации
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">Июль 2025</div>
+                            <div class="timeline-text">
+                                <strong>Сбор заявок и отбор</strong><br>
+                                Прием заявок, экспертная оценка, формирование списка участников
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">1-7 августа 2025</div>
+                            <div class="timeline-text">
+                                <strong>Финальная подготовка</strong><br>
+                                Подготовка площадок, материалов, прибытие менторов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-time">8-10 августа 2025</div>
+                            <div class="timeline-text">
+                                <strong>Проведение хакатона</strong><br>
+                                Реализация полной программы мероприятия
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3 style="margin-bottom: 16px;">Контакты для координации</h3>
+                <p>
+                    <strong>Angel Connect:</strong> Техническая программа и менторы<br>
+                    <strong>IT Park:</strong> Логистика и площадки<br>
+                    <strong>Министерство цифровых технологий Республики Узбекистан:</strong> Общее кураторство и госпартнеры
+                </p>
+            </div>
+
+            <span class="page-number">4</span>
+        </div>
+    </div>
+</body>
+</html>
