@@ -555,6 +555,7 @@
             .page {
                 padding: 60px 40px;
                 margin-bottom: 30px;
+                min-height: auto;
             }
             
             .stats,
@@ -590,34 +591,39 @@
             }
             
             .logos {
-                gap: 24px;
+                gap: 16px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
             
             .partner-logo {
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
+            }
+            
+            .logo-container {
+                padding: 8px;
+                border-radius: 12px;
             }
             
             h1 {
-                font-size: 36px;
+                font-size: 28px;
                 line-height: 1.25;
                 margin-bottom: 20px;
             }
             
             h2 {
-                font-size: 28px;
+                font-size: 24px;
                 margin-bottom: 24px;
             }
             
             h3 {
-                font-size: 22px;
+                font-size: 20px;
                 margin-bottom: 20px;
             }
             
             .subtitle {
-                font-size: 18px;
+                font-size: 16px;
                 margin-bottom: 40px;
             }
             
@@ -631,12 +637,12 @@
             .stat-card,
             .responsibility-card,
             .question-card {
-                padding: 28px;
+                padding: 24px;
             }
             
             .highlight-box {
-                padding: 32px;
-                margin: 32px 0;
+                padding: 24px;
+                margin: 24px 0;
             }
             
             .budget-table {
@@ -644,6 +650,7 @@
                 display: block;
                 overflow-x: auto;
                 white-space: nowrap;
+                border-radius: 8px;
             }
             
             .budget-table th,
@@ -654,6 +661,7 @@
             
             .timeline-item {
                 padding-left: 30px;
+                margin-bottom: 24px;
             }
             
             .timeline-item::before {
@@ -665,6 +673,16 @@
             .timeline-item::after {
                 left: 11px;
             }
+            
+            .timeline-time {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            
+            .timeline-text {
+                font-size: 14px;
+                line-height: 1.6;
+            }
         }
         
         @media screen and (max-width: 480px) {
@@ -673,43 +691,113 @@
             }
             
             .page {
-                padding: 32px 20px;
+                padding: 24px 16px;
                 margin-bottom: 16px;
                 border-radius: 12px;
             }
             
+            .header {
+                margin-bottom: 32px;
+                padding-bottom: 16px;
+            }
+            
+            .logos {
+                gap: 12px;
+            }
+            
+            .partner-logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .logo-container {
+                padding: 6px;
+                border-radius: 8px;
+            }
+            
             h1 {
-                font-size: 28px;
+                font-size: 24px;
                 line-height: 1.3;
+                margin-bottom: 16px;
             }
             
             h2 {
-                font-size: 24px;
+                font-size: 20px;
+                margin-bottom: 20px;
             }
             
             h3 {
-                font-size: 20px;
+                font-size: 18px;
+                margin-bottom: 16px;
             }
             
             .subtitle {
-                font-size: 16px;
+                font-size: 14px;
+                margin-bottom: 32px;
             }
             
             .stat-card,
             .responsibility-card,
             .question-card {
-                padding: 24px;
+                padding: 20px;
             }
             
             .highlight-box {
-                padding: 28px;
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .budget-table {
+                font-size: 12px;
             }
             
             .budget-table th,
             .budget-table td {
-                padding: 10px 6px;
+                padding: 8px 4px;
+                font-size: 12px;
+                min-width: 90px;
+            }
+            
+            .timeline-item {
+                padding-left: 24px;
+                margin-bottom: 20px;
+            }
+            
+            .timeline-item::before {
+                left: 2px;
+                width: 14px;
+                height: 14px;
+            }
+            
+            .timeline-item::after {
+                left: 8px;
+            }
+            
+            .timeline-time {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+            
+            .timeline-text {
                 font-size: 13px;
-                min-width: 100px;
+                line-height: 1.5;
+            }
+            
+            .section {
+                margin-bottom: 40px;
+            }
+            
+            .stats .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .stats .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            .responsibility-card li,
+            .question-card p {
+                font-size: 13px;
             }
         }
     </style>
