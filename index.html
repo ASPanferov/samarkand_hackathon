@@ -735,25 +735,6 @@
                 border-bottom: none;
             }
             
-            .nav-toggle {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 40px;
-                background: none;
-                border: none;
-                color: #1a1a1a;
-                font-size: 1.5rem;
-                cursor: pointer;
-                border-radius: 8px;
-                transition: background-color 0.3s ease;
-            }
-            
-            .nav-toggle:hover {
-                background: rgba(124, 58, 237, 0.1);
-            }
-            
             .main-content {
                 padding-top: 80px;
             }
@@ -1028,6 +1009,31 @@
             }
         }
 
+        .nav-toggle {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: none;
+                border: none;
+                color: #1a1a1a;
+                font-size: 1.5rem;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .nav-toggle:hover {
+                background: rgba(124, 58, 237, 0.1);
+            }
+        }
+        
         @media (min-width: 769px) {
             .nav-toggle {
                 display: none;
@@ -1915,9 +1921,19 @@
             const navToggle = document.querySelector('.nav-toggle');
             const navMenu = document.querySelector('.nav-menu');
             
+            console.log('Navigation elements found:', {
+                navLinks: navLinks.length,
+                sections: sections.length,
+                navToggle: !!navToggle,
+                navMenu: !!navMenu
+            });
+            
             // Mobile menu toggle
             if (navToggle && navMenu) {
-                navToggle.addEventListener('click', function() {
+                navToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Toggle clicked');
                     navMenu.classList.toggle('active');
                 });
                 
@@ -1927,11 +1943,14 @@
                         navMenu.classList.remove('active');
                     }
                 });
+            } else {
+                console.warn('Mobile menu elements not found');
             }
             
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
+                    console.log('Nav link clicked:', this.dataset.section);
                     
                     // Remove active class from all links and sections
                     navLinks.forEach(nl => nl.classList.remove('active'));
@@ -1944,6 +1963,9 @@
                     const targetSection = document.getElementById(this.dataset.section);
                     if (targetSection) {
                         targetSection.classList.add('active');
+                        console.log('Section activated:', this.dataset.section);
+                    } else {
+                        console.warn('Target section not found:', this.dataset.section);
                     }
                     
                     // Close mobile menu
