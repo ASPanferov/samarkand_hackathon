@@ -2128,16 +2128,21 @@
             
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
+                    // If link opens in new tab/window (external link), let default behavior proceed
+                    if (this.target === '_blank') {
+                        return; // Do not intercept external links
+                    }
+
                     e.preventDefault();
                     console.log('Nav link clicked:', this.dataset.section);
-                    
+
                     // Remove active class from all links and sections
                     navLinks.forEach(nl => nl.classList.remove('active'));
                     sections.forEach(section => section.classList.remove('active'));
-                    
+
                     // Add active class to clicked link
                     this.classList.add('active');
-                    
+
                     // Show corresponding section
                     const targetSection = document.getElementById(this.dataset.section);
                     if (targetSection) {
@@ -2146,7 +2151,7 @@
                     } else {
                         console.warn('Target section not found:', this.dataset.section);
                     }
-                    
+
                     // Close mobile menu
                     if (navMenu) {
                         navMenu.classList.remove('active');
